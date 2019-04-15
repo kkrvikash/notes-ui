@@ -1,0 +1,12 @@
+<div class="card text-white bg-info mb-3">
+  <h5 class="card-header">#{{ note.id }} - {{ note.title }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ note.updatedAt | date:'medium' }}</h5>
+    <p class="card-text">{{note.content}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    <td><button (click)="editNote(note.id)" class="btn btn-success" style='margin-right:16px'>Edit</button></td>
+    <td><button (click)="back()" class="btn btn-primary" style='margin-right:16px'> Back</button></td>
+    <td><button (click)="removeNote(note.id)" class="btn btn-danger"> Delete</button></td>
+  </div>
+</div>
